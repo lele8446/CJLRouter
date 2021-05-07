@@ -1,0 +1,13 @@
+# 这里设置自定义的cocoapods索引库地址（不设置默认为github索引）
+source 'https://github.com/CocoaPods/Specs.git'
+
+# use_frameworks!
+
+
+platform :ios, '9.0'
+
+target 'CJDemo' do
+# 这里设置当前业务组件名称
+  pod 'CJMain', :path => '../'
+    
+end

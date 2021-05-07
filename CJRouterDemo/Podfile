@@ -1,0 +1,13 @@
+
+# use_frameworks!
+
+
+platform :ios, '9.0'
+
+target 'CJRouter' do
+  pod 'CJRouter', :path => '../'
+  pod 'CJMain', :path => '../Business/CJMain'
+  pod 'CJHome', :path => '../Business/CJHome'
+  pod 'CJLogin', :path => '../Business/CJLogin'
+    
+end
