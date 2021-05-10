@@ -10,25 +10,27 @@ PODS:
 DEPENDENCIES:
   - CJHome (from `../Business/CJHome`)
   - CJLogin (from `../Business/CJLogin`)
-  - CJLRouter (from `../`)
+  - CJLRouter
   - CJMain (from `../Business/CJMain`)
+
+SPEC REPOS:
+  https://e.coding.net/lele8446/MyRepo.git:
+    - CJLRouter
 
 EXTERNAL SOURCES:
   CJHome:
     :path: "../Business/CJHome"
   CJLogin:
     :path: "../Business/CJLogin"
-  CJLRouter:
-    :path: "../"
   CJMain:
     :path: "../Business/CJMain"
 
 SPEC CHECKSUMS:
   CJHome: 39cb7e16046e1204e4212a9c1021a832246f3be9
   CJLogin: c1cf8af24fbee19cd6fa2c6ed83d516c6e255a1e
-  CJLRouter: 5853cf554118fe00d6530b0a061aa1115ce338c0
+  CJLRouter: dbdc4ea3b4163a3318cee5e20ac04b5217066a2f
   CJMain: 81f1c66a7b3ed29509ad34df38d23dfb2a52713d
 
-PODFILE CHECKSUM: 74946076630107358d916eb7e4cd4f064c2c7007
+PODFILE CHECKSUM: 7d1e7564eae0008e54ff0ba3790cef8bb5699cdf
 
 COCOAPODS: 1.8.4

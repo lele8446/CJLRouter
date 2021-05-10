@@ -7,7 +7,9 @@ source 'https://cdn.cocoapods.org/'
 platform :ios, '9.0'
 
 target 'CJLRouter' do
-  pod 'CJLRouter', :path => '../'
+  pod 'CJLRouter'
+  # 指定.podspec文件的绝对路径，本地开发联调Pod库
+#  pod 'CJLRouter', :path => '../'
   pod 'CJMain', :path => '../Business/CJMain'
   pod 'CJHome', :path => '../Business/CJHome'
   pod 'CJLogin', :path => '../Business/CJLogin'
