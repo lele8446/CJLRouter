@@ -7,16 +7,16 @@
 //
 
 #import "CJLoginModule.h"
-#import <CJRouter.h>
+#import <CJLRouter.h>
 #import <UIKit/UIKit.h>
 
 @implementation CJLoginModule
 
 + (void)load {
-    [CJModuleManager registerModuleClass:self.class];
+    [CJLModuleManager registerModuleClass:self.class];
 }
 
-#pragma mark - CJModuleProtocol @required
+#pragma mark - CJLModuleProtocol @required
 + (instancetype)sharedInstance {
     static CJLoginModule *share = nil;
     static dispatch_once_t onceToken;
@@ -33,7 +33,7 @@
 
 }
 
-#pragma mark - CJModuleProtocol @optional
+#pragma mark - CJLModuleProtocol @optional
 #pragma mark - 登录业务模块的回调方法
 - (void)login_updateUserInfo {
     NSLog(@"%@ --- %@ 更新用户信息成功",[self class],NSStringFromSelector(_cmd));

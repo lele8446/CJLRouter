@@ -7,7 +7,7 @@
 
 #import "MeViewController.h"
 #import "LoginViewController.h"
-#import <CJRouter.h>
+#import <CJLRouter.h>
 
 @interface MeViewController ()
 
@@ -64,7 +64,7 @@
         [activityIndicator stopAnimating];
         activityIndicator = nil;
         //向所有业务组件转发更新用户成功的消息
-        [CJModuleManager checkAllModulesWithSelector:_cmd arguments:@[]];
+        [CJLModuleManager checkAllModulesWithSelector:_cmd arguments:@[]];
     });
     
     

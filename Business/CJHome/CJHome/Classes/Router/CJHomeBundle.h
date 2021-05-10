@@ -7,8 +7,8 @@
 //
 
 /// 当前业务组件资源Bundle
-#import "CJBundle.h"
+#import "CJLBundle.h"
 
-@interface CJHomeBundle : CJBundle <CJBundleProtocol>
+@interface CJHomeBundle : CJLBundle <CJLBundleProtocol>
 
 @end

@@ -1,0 +1,15 @@
+# 这里设置自定义的cocoapods索引库地址（不设置默认为github索引）
+source 'https://cdn.cocoapods.org/'
+
+# use_frameworks!
+
+
+platform :ios, '9.0'
+
+target 'CJLRouter' do
+  pod 'CJLRouter', :path => '../'
+  pod 'CJMain', :path => '../Business/CJMain'
+  pod 'CJHome', :path => '../Business/CJHome'
+  pod 'CJLogin', :path => '../Business/CJLogin'
+    
+end

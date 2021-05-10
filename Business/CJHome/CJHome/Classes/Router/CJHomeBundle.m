@@ -10,11 +10,11 @@
 
 @implementation CJHomeBundle
 
-#pragma mark - CJBundleProtocol
+#pragma mark - CJLBundleProtocol
 
 /// 需要返回当前业务组件的bundle（默认bundle名与业务组件名称相同）
-+ (NSBundle *)cj_bundle {
-    return [self cj_bundleWithName:@"CJHome"];
++ (NSBundle *)cjl_bundle {
+    return [self cjl_bundleWithName:@"CJHome"];
 }
 
 @end

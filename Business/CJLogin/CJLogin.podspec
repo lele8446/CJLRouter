@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
   }
   # s.public_header_files = 'CJLogin/**/*.h'
 
-  s.dependency 'CJRouter'
+  s.dependency 'CJLRouter'
 end

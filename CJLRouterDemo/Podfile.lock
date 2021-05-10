@@ -1,0 +1,34 @@
+PODS:
+  - CJHome (1.0.0):
+    - CJLRouter
+  - CJLogin (1.0.0):
+    - CJLRouter
+  - CJLRouter (1.0.0)
+  - CJMain (1.0.0):
+    - CJLRouter
+
+DEPENDENCIES:
+  - CJHome (from `../Business/CJHome`)
+  - CJLogin (from `../Business/CJLogin`)
+  - CJLRouter (from `../`)
+  - CJMain (from `../Business/CJMain`)
+
+EXTERNAL SOURCES:
+  CJHome:
+    :path: "../Business/CJHome"
+  CJLogin:
+    :path: "../Business/CJLogin"
+  CJLRouter:
+    :path: "../"
+  CJMain:
+    :path: "../Business/CJMain"
+
+SPEC CHECKSUMS:
+  CJHome: 39cb7e16046e1204e4212a9c1021a832246f3be9
+  CJLogin: c1cf8af24fbee19cd6fa2c6ed83d516c6e255a1e
+  CJLRouter: 5853cf554118fe00d6530b0a061aa1115ce338c0
+  CJMain: 81f1c66a7b3ed29509ad34df38d23dfb2a52713d
+
+PODFILE CHECKSUM: 74946076630107358d916eb7e4cd4f064c2c7007
+
+COCOAPODS: 1.8.4

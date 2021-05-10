@@ -7,16 +7,16 @@
 //
 
 #import "CJMainModule.h"
-#import <CJRouter.h>
+#import <CJLRouter.h>
 #import <UIKit/UIKit.h>
 
 @implementation CJMainModule
 
 + (void)load {
-    [CJModuleManager registerModuleClass:self.class];
+    [CJLModuleManager registerModuleClass:self.class];
 }
 
-#pragma mark - CJModuleProtocol @required
+#pragma mark - CJLModuleProtocol @required
 + (instancetype)sharedInstance {
     static CJMainModule *share = nil;
     static dispatch_once_t onceToken;
@@ -33,7 +33,7 @@
 
 }
 
-#pragma mark - CJModuleProtocol @optional
+#pragma mark - CJLModuleProtocol @optional
 
 #pragma mark - application life cycle
 /*

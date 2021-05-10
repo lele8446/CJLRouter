@@ -6,7 +6,7 @@
 //
 
 #import "HomeViewController.h"
-#import <CJRouter.h>
+#import <CJLRouter.h>
 
 @interface HomeViewController ()
 
@@ -40,7 +40,7 @@
         [self loginSuccess];
     };
     NSArray *params = @[self.navigationController,loginSuccess];
-    [CJRouter routerPerformSELname:@"login_loginFromController:success:" params:params];
+    [CJLRouter routerPerformSELname:@"login_loginFromController:success:" params:params];
 }
 
 - (void)loginSuccess {

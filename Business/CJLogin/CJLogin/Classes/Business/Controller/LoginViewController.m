@@ -6,7 +6,7 @@
 //
 
 #import "LoginViewController.h"
-#import <CJRouter.h>
+#import <CJLRouter.h>
 
 @interface LoginViewController ()
 @property (nonatomic, strong) UIActivityIndicatorView * activityIndicator;
@@ -52,7 +52,7 @@
             }
             
             //向所有业务组件转发用户登录成功的消息
-            [CJModuleManager checkAllModulesWithSelector:NSSelectorFromString(@"login_loginSuccess") arguments:@[]];
+            [CJLModuleManager checkAllModulesWithSelector:NSSelectorFromString(@"login_loginSuccess") arguments:@[]];
         }];
     });
 }
