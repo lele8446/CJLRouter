@@ -31,9 +31,9 @@ pod 'CJLRouter'
 
 #### 业务组件生成
 
-下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/Rename.py)，打开终端进入脚本所在目录进行组件模块初始化
+下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/组件化/Rename.py?Expires=1620721802&OSSAccessKeyId=TMP.3KdzKhc3rJsdsD6WDji7hbX1WSFyWy2qbFuwieNM43fGdqPkhrxTiz5Rsfn5T8RiyuiQBYAxqvJYqwSucM2tXJ23ffPjMk&Signature=BPSiBfmbnudAGkdQ56MjM605xDI%3D&response-content-type=application%2Foctet-stream)，打开终端进入脚本所在目录进行组件模块初始化
 
-初次执行请先执行  **chmod 777  Rename.py** 指令，对脚本赋予可执行指令
+初次运行请先执行  **chmod 777  Rename.py** 指令，对脚本赋予可执行指令
 
 ```shell
 # Rename.py [组件模块名称]
@@ -47,9 +47,10 @@ pod 'CJLRouter'
 执行Rename.py脚本后，组件模块的**Router**文件夹下将自动生成以下相关文件
 
 #####路由分类
-
-> CJLRouter+ModuleName.h
-> CJLRouter+ModuleName.m
+```objc
+CJLRouter+ModuleName.h
+CJLRouter+ModuleName.m
+```
 
 用于声明当前组件可供外部调用的通信接口，接口方法的明名格式为：+ 当前模块名_方法名
 
@@ -71,10 +72,11 @@ BOOL result = [CJLRouter routerPerformSELname:@"login_updateUserName:" params:@[
 BOOL result = [CJLRouter routerPerformWithUri:@"CJLRouter://login/login_updateUserName:?name=username"];
 ```
 
-#####组件通信
-
-> ModuleNameModule.h
-> ModuleNameModule.m
+##### 组件通信
+```objc
+ModuleNameModule.h
+ModuleNameModule.m
+```
 
 业务组件生命周期管理以及组件间消息通信管理类
 
@@ -105,9 +107,10 @@ BOOL result = [CJLRouter routerPerformWithUri:@"CJLRouter://login/login_updateUs
 ```
 
 ##### 组件资源管理
-
-> ModuleNameBundle.h
-> ModuleNameBundle.m
+```objc
+ModuleNameBundle.h
+ModuleNameBundle.m
+```
 
 声明当前业务组件资源Bundle，遵循`CJLBundleProtocol`协议，必须实现 **+cjl_bundle** 方法，用于返回当前组件Bundle，默认bundle名与业务组件名称相同
 
