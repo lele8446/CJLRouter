@@ -3,7 +3,7 @@
 
 
 
-#### pod管理
+### pod管理
 
 ```shell
 pod 'CJLRouter'
@@ -29,7 +29,7 @@ pod 'CJLRouter'
 
 
 
-#### 业务组件生成
+### 业务组件生成
 
 下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/组件化/Rename.py?Expires=1620721802&OSSAccessKeyId=TMP.3KdzKhc3rJsdsD6WDji7hbX1WSFyWy2qbFuwieNM43fGdqPkhrxTiz5Rsfn5T8RiyuiQBYAxqvJYqwSucM2tXJ23ffPjMk&Signature=BPSiBfmbnudAGkdQ56MjM605xDI%3D&response-content-type=application%2Foctet-stream)，打开终端进入脚本所在目录进行组件模块初始化
 
@@ -42,11 +42,11 @@ pod 'CJLRouter'
 
 
 
-#### 使用说明
+### 使用说明
 
 执行Rename.py脚本后，组件模块的**Router**文件夹下将自动生成以下相关文件
 
-#####路由分类
+#### 路由分类
 ```objc
 CJLRouter+ModuleName.h
 CJLRouter+ModuleName.m
@@ -72,7 +72,7 @@ BOOL result = [CJLRouter routerPerformSELname:@"login_updateUserName:" params:@[
 BOOL result = [CJLRouter routerPerformWithUri:@"CJLRouter://login/login_updateUserName:?name=username"];
 ```
 
-##### 组件通信
+#### 组件通信
 ```objc
 ModuleNameModule.h
 ModuleNameModule.m
@@ -106,7 +106,7 @@ ModuleNameModule.m
 }
 ```
 
-##### 组件资源管理
+#### 组件资源管理
 ```objc
 ModuleNameBundle.h
 ModuleNameBundle.m
