@@ -18,13 +18,13 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"首页";
-    
+
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, 200, 50)];
     label.text = @"这是首页";
     label.textAlignment = NSTextAlignmentCenter;
     label.center = CGPointMake(self.view.center.x,self.view.center.y-50);
     [self.view addSubview:label];
-    
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 100, 50);
     button.layer.cornerRadius = 5;

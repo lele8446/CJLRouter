@@ -22,7 +22,7 @@
             NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
             invocation.target = target;
             invocation.selector = selector;
-            
+
             NSInteger paramsCount = signature.numberOfArguments - 2;
             paramsCount = MIN(paramsCount, objects.count);
             for (NSInteger i = 0; i < paramsCount; i++) {
@@ -30,10 +30,10 @@
                 if ([object isKindOfClass:[NSNull class]]) continue;
                 [invocation setArgument:&object atIndex:i + 2];
             }
-            
+
             // 调用方法
             [invocation invoke];
-            
+
             //声明返回值变量
             id returnValue = nil;
             //获得返回值类型

@@ -51,12 +51,12 @@ static NSString *CJLRouterAppScheme = nil;
     NSArray *rangeList = [actionName componentsSeparatedByString:@":"];
     //uri 调用请求参数
     NSArray *queryItems = urlComponents.queryItems;
-    
+
     if((rangeList.count-1) != queryItems.count) {
         NSLog(@"========= CJLRouter =========\n 路由URL调用方法'%@' 入参个数 %@ 与所需参数个数 %@ 不符, ",actionName,@(queryItems.count),@(rangeList.count));
         return nil;
     }
-    
+
     NSMutableArray *params = [NSMutableArray array];
     for (NSURLQueryItem *item in queryItems) {
         [params addObject:item.value];

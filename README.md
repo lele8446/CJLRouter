@@ -31,7 +31,7 @@ pod 'CJLRouter'
 
 ### 业务组件生成
 
-下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/组件化/Rename.py?Expires=1620721802&OSSAccessKeyId=TMP.3KdzKhc3rJsdsD6WDji7hbX1WSFyWy2qbFuwieNM43fGdqPkhrxTiz5Rsfn5T8RiyuiQBYAxqvJYqwSucM2tXJ23ffPjMk&Signature=BPSiBfmbnudAGkdQ56MjM605xDI%3D&response-content-type=application%2Foctet-stream)，打开终端进入脚本所在目录进行组件模块初始化
+下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/Rename.py.zip)，打开终端进入脚本所在目录进行组件模块初始化
 
 初次运行请先执行  **chmod 777  Rename.py** 指令，对脚本赋予可执行指令
 

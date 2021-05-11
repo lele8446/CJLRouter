@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor lightGrayColor];
     self.navigationItem.title = @"登录";
-    
+
     if (@available(iOS 13.0, *)) {
         self.activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
     } else {
@@ -31,7 +31,7 @@
     self.activityIndicator.color = [UIColor whiteColor];
     self.activityIndicator.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.75];
     self.activityIndicator.hidesWhenStopped = YES;
-    
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 200, 50);
     button.center = CGPointMake(self.view.center.x,self.view.center.y+200);
@@ -50,7 +50,7 @@
             if (self.loginSuccessBlock) {
                 self.loginSuccessBlock();
             }
-            
+
             //向所有业务组件转发用户登录成功的消息
             [CJLModuleManager checkAllModulesWithSelector:NSSelectorFromString(@"login_loginSuccess") arguments:@[]];
         }];
@@ -62,7 +62,7 @@
     login.loginSuccessBlock = loginSuccessBlock;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:login];
     [viewController presentViewController:nav animated:YES completion:^{
-        
+
     }];
 }
 @end

@@ -14,33 +14,33 @@
 
 /** APP进程已启动*/
 - (BOOL)application:(UIApplication *)application willFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-    
+
     //设置当前app路由AppScheme
     [CJLRouter setupAppScheme:App_Scheme];
     //组件model初始化
     [CJLModuleManager setupAllModules];
     //向业务组件转发当前方法
     [CJLModuleManager checkAllModulesWithSelector:_cmd arguments:@[CJLSafe(application),CJLSafe(launchOptions)]];
-    
+
     return YES;
 }
 /** APP启动完成，准备运行*/
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary *)launchOptions {
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
-    
+
     UITabBarController *tab = [UITabBarController new];
     //路由分类方法转发调用
     UINavigationController *homeNav = [CJLRouter routerPerformSELname:@"home_homeNavigationCtr"];
-    
+
     //AppScheme路由URI调用
     NSString *uri = [NSString stringWithFormat:@"%@login/login_meNavigationCtr",App_Scheme];
     UINavigationController *meNav = [CJLRouter routerPerformWithUri:uri];
-    
+
     [tab setViewControllers:@[homeNav,meNav] animated:YES];
     [[UIApplication sharedApplication].keyWindow setRootViewController:tab];
-    
+
     [CJLModuleManager checkAllModulesWithSelector:_cmd arguments:@[CJLSafe(application),CJLSafe(launchOptions)]];
     return YES;
 }

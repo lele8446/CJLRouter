@@ -19,7 +19,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"我的";
-    
+
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 100, 50);
     button.center = CGPointMake(self.view.center.x,self.view.center.y-10);
@@ -28,7 +28,7 @@
     [button setTitle:@"登录" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
-    
+
     UIButton *button2 = [UIButton buttonWithType:UIButtonTypeCustom];
     button2.frame = CGRectMake(0, 0, 220, 50);
     button2.center = CGPointMake(self.view.center.x,self.view.center.y+220);
@@ -37,7 +37,7 @@
     [button2 setTitle:@"更新用户信息" forState:UIControlStateNormal];
     [button2 addTarget:self action:@selector(login_updateUserInfo) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button2];
-    
+
 }
 
 - (void)login {
@@ -45,7 +45,7 @@
 }
 
 - (void)login_updateUserInfo {
-    
+
     __block UIActivityIndicatorView *activityIndicator = nil;
     if (@available(iOS 13.0, *)) {
         activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleLarge];
@@ -66,8 +66,8 @@
         //向所有业务组件转发更新用户成功的消息
         [CJLModuleManager checkAllModulesWithSelector:_cmd arguments:@[]];
     });
-    
-    
+
+
 }
 
 
