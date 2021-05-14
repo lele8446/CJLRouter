@@ -31,9 +31,9 @@ pod 'CJLRouter'
 
 ### 业务组件生成
 
-下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/CJLRouterModule.py.zip)，打开终端进入脚本所在目录进行组件模块初始化
+下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/CJLRouterModule.py.zip) (CJLRouterModule.py)，打开终端进入脚本所在目录进行组件模块初始化
 
-初次运行请先执行  **chmod 777  Rename.py** 指令，对脚本赋予可执行指令
+初次运行请先执行  **chmod 777  CJLRouterModule.py** 指令，对脚本赋予可执行指令
 
 ```shell
 # CJLRouterModule.py [组件模块名称]
@@ -44,7 +44,7 @@ pod 'CJLRouter'
 
 ### 使用说明
 
-执行Rename.py脚本后，组件模块的**Router**文件夹下将自动生成以下相关文件
+执行CJLRouterModule.py脚本后，组件模块的**Router**文件夹下将自动生成以下相关文件
 
 #### 路由分类
 ```objc
