@@ -29,10 +29,6 @@
 
 @interface CJLRouter (CJMain)
 
-/// 获取登录页面Controller
-+ (UIViewController *)login_loginViewController;
 
-/// 更新用户名
-+ (BOOL)login_updateUserName:(NSString *)name;
 
 @end

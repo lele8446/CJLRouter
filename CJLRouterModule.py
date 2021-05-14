@@ -1,6 +1,13 @@
 #!/usr/bin/python
 # coding=utf-8
 
+##################################
+# CJLRouterModule.py 路由业务组件模板快速创建脚本
+#
+# 使用方式：./CJLRouterModule.py ModuleName（ModuleName为新建组件名称）
+#
+##################################
+
 import sys
 import os
 import os.path
@@ -35,18 +42,17 @@ if os.path.isdir(oldFilePath):
 	shutil.rmtree(oldFilePath)
 
 
-def schedule(a,b,c):
-    '''''
-    监听下载进度函数
-    a:已经下载的数据块
-    b:数据块的大小
-    c:远程文件的大小
-    '''
-    per = 100.0 * a * b / c
-    if per > 100 :
-        per = 100
-    print 'progress : %.2f%%' % per
-    if per == 100:
+def schedule(blocknum,blocksize,totalsize):
+    """
+    blocknum:当前已经下载的块
+    blocksize:每次传输的块大小
+    totalsize:网页文件总大小
+    """
+    per=100.0*(blocknum*blocksize)/totalsize
+    if per>100:
+        per=100
+    print("download : %.2f%%" %(per))
+    if per >= 100.0:
     	print '+++++++++ Download Successful +++++++++'
 
 

@@ -3,13 +3,13 @@ source 'https://cdn.cocoapods.org/'
 
 # use_frameworks!
 
-
 platform :ios, '9.0'
 
 target 'CJLRouter' do
+  # 引用网络组件
   pod 'CJLRouter'
-  # 指定.podspec文件的绝对路径，本地开发联调Pod库
-#  pod 'CJLRouter', :path => '../'
+  
+  # 指定.podspec文件的绝对路径，本地开发联调对应的组件模块
   pod 'CJMain', :path => '../Business/CJMain'
   pod 'CJHome', :path => '../Business/CJHome'
   pod 'CJLogin', :path => '../Business/CJLogin'

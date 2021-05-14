@@ -31,13 +31,13 @@ pod 'CJLRouter'
 
 ### 业务组件生成
 
-下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/Rename.py.zip)，打开终端进入脚本所在目录进行组件模块初始化
+下载业务组件 [模板初始化脚本](https://lele8446infoq.oss-cn-shenzhen.aliyuncs.com/%E7%BB%84%E4%BB%B6%E5%8C%96/CJLRouterModule.py.zip)，打开终端进入脚本所在目录进行组件模块初始化
 
 初次运行请先执行  **chmod 777  Rename.py** 指令，对脚本赋予可执行指令
 
 ```shell
-# Rename.py [组件模块名称]
-./Rename.py ModuleName
+# CJLRouterModule.py [组件模块名称]
+./CJLRouterModule.py ModuleName
 ```
 
 
@@ -72,7 +72,7 @@ BOOL result = [CJLRouter routerPerformSELname:@"login_updateUserName:" params:@[
 BOOL result = [CJLRouter routerPerformWithUri:@"CJLRouter://login/login_updateUserName:?name=username"];
 ```
 
-#### 组件通信
+#### 组件Module管理
 ```objc
 ModuleNameModule.h
 ModuleNameModule.m

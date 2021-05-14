@@ -17,7 +17,7 @@
 
     //设置当前app路由AppScheme
     [CJLRouter setupAppScheme:App_Scheme];
-    //组件model初始化
+    //完成所有已经注册组件module的初始化
     [CJLModuleManager setupAllModules];
     //向业务组件转发当前方法
     [CJLModuleManager checkAllModulesWithSelector:_cmd arguments:@[CJLSafe(application),CJLSafe(launchOptions)]];
